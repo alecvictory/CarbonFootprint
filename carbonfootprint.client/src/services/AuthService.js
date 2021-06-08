@@ -23,9 +23,6 @@ AuthService.on(AuthService.AUTH_EVENTS.AUTHENTICATED, async function() {
   setBearer(AuthService.bearer)
   AppState.user = AuthService.user
   await accountService.getAccount()
-  // router.push(({ name: 'HomePage' }))
 
   // NOTE if there is something you want to do once the user is authenticated, place that here
-
-  // AppState.activeProfile = await profilesService.getProfileById()
 })

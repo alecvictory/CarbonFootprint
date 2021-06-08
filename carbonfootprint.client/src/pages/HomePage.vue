@@ -25,7 +25,6 @@
       <div class="col-12" v-if="state.ytdScores">
         <div class="weekly-score component-spacing weekly-score__container text-left">
           <h6 class="weekly-score__title">
-            <!-- YTD AVERAGE HERE -->
             YTD Daily Average - <span :value="averageScore()"> {{ state.totalScore }} Kg/CO₂ </span>
           </h6>
           <div class="progress weekly-score__progress">
@@ -120,13 +119,12 @@ export default {
         const C = state.weather.current.weather.tp
         return Math.floor(C * (9 / 5) + 32)
       })
-      // icon: computed(()=> AppState.weatherApi.current.weather.ic)
     })
     onMounted(async() => {
-      await daysService.getAllDays()
-      await profilesService.getAllProfiles()
-      await apiService.getNewsApi()
-      await apiService.getWeatherApi()
+      daysService.getAllDays()
+      profilesService.getAllProfiles()
+      apiService.getNewsApi()
+      apiService.getWeatherApi()
       state.loading = false
     })
     return {

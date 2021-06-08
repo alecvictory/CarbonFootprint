@@ -33,22 +33,16 @@
 import { AuthService } from '../services/AuthService'
 import { AppState } from '../AppState'
 import { computed, reactive } from 'vue'
-// import { useRouter } from 'vue-router'
 export default {
   name: 'MyNavbar',
   setup() {
-    // const router = useRouter()
     const state = reactive({
       dropOpen: false
     })
-    // GO BACK TO HERE
     return {
       state,
       uncheck() {
         document.querySelector('.navigation__checkbox').checked = false
-        // document.getElementById('nav-list').classList.toggle('hide')
-        // document.querySelectorAll('.navigation__link').classList.toggle('hide')
-        console.log('checked')
       },
       account: computed(() => AppState.account),
       user: computed(() => AppState.user),
@@ -148,7 +142,6 @@ export default {
             transform: translateX(1rem);
         }
     }
-    // NAV Functionality
     &__checkbox:checked ~ &__background {
         transform: scale(80);
     }
@@ -180,12 +173,6 @@ export default {
         &::before {top: -.5rem}
         &::after {top: .5rem}
     }
-    // &__button:hover &__icon:before {
-    //     top: -1rem;
-    // }
-    // &__button:hover &__icon:after {
-    //     top: 1rem;
-    // }
     &__checkbox:checked + &__button &__icon {
         background-color: transparent;
     }

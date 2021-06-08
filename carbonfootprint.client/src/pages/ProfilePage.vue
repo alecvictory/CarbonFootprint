@@ -3,7 +3,6 @@
     Loading...
   </div>
   <div v-else class="profile-page container-fluid">
-    <!-- Weeks Score -->
     <div class="row" v-if="state.todayScore">
       <div class="col-12">
         <div class="profile__title text-center">
@@ -124,7 +123,6 @@ export default {
     const route = useRoute()
     watchEffect(
       async() => {
-        // function you want to run when the params change, you can also use newParams.id
         if (route.params.id) {
           await profilesService.getProfileById(route.params.id)
           await carsService.getCarsByProfileId(route.params.id)
@@ -150,14 +148,6 @@ export default {
       user: computed(() => AppState.user),
       account: computed(() => AppState.account)
     })
-    // watchEffect(
-    //   async() => {
-    //     // function you want to run when the params change, you can also use newParams.id
-    //     if (AppState.days) {
-    //       drawChart()
-    //     }
-    //   }
-    // )
     onMounted(async() => {
       await profilesService.getProfileById(route.params.id)
       await carsService.getCarsByProfileId(route.params.id)

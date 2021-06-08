@@ -22,38 +22,6 @@
             >
               Login
             </button>
-
-            <!-- <div class="dropdown" v-else>
-              <div
-                class="dropdown-toggle"
-                @click="state.dropOpen = !state.dropOpen"
-              >
-                <img
-                  :src="user.picture"
-                  alt="user photo"
-                  height="40"
-                  class="rounded"
-                />
-                <span class="mx-3">{{ user.name }}</span>
-              </div>
-              <div
-                class="dropdown-menu p-0 list-group w-100"
-                :class="{ show: state.dropOpen }"
-                @click="state.dropOpen = false"
-              >
-                <router-link :to="{ name: 'Account' }">
-                  <div class="list-group-item list-group-item-action hoverable">
-                    Account
-                  </div>
-                </router-link>
-                <div
-                  class="list-group-item list-group-item-action hoverable"
-                  @click="logout"
-                >
-                  logout
-                </div>
-              </div>
-            </div> -->
           </span>
           <span class="navbar-text">
             <button
@@ -63,38 +31,6 @@
             >
               Sign Up
             </button>
-
-            <!-- <div class="dropdown" v-else>
-              <div
-                class="dropdown-toggle"
-                @click="state.dropOpen = !state.dropOpen"
-              >
-                <img
-                  :src="user.picture"
-                  alt="user photo"
-                  height="40"
-                  class="rounded"
-                />
-                <span class="mx-3">{{ user.name }}</span>
-              </div>
-              <div
-                class="dropdown-menu p-0 list-group w-100"
-                :class="{ show: state.dropOpen }"
-                @click="state.dropOpen = false"
-              >
-                <router-link :to="{ name: 'Account' }">
-                  <div class="list-group-item list-group-item-action hoverable">
-                    Account
-                  </div>
-                </router-link>
-                <div
-                  class="list-group-item list-group-item-action hoverable"
-                  @click="logout"
-                >
-                  logout
-                </div>
-              </div>
-            </div> -->
           </span>
         </div>
 
@@ -204,9 +140,6 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/scss/_variables.scss';
 @import "../assets/scss/main.scss";
-// * {
-//   border: 1px solid red;
-// }
 .about-logo{
   transform: rotate(90deg);
   height: 2.5rem;
@@ -243,7 +176,6 @@ export default {
     &--title {
       font-family: $primary-font;
       text-transform: uppercase;
-      // line-height: 1.6;
       font-size: 1.3em;
       font-weight: bold;
       color: $primary;
@@ -274,7 +206,6 @@ export default {
       color: $primary;
       font-weight: bold;
     text-transform: uppercase;
-    // line-height: 1.6;
     font-size: 1.3em;
     }
     &--text {

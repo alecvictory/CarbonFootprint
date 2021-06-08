@@ -1,5 +1,4 @@
 <template>
-  <!-- go back to here -->
   <a :href="news.url">
     <div class="news-component-spacing d-flex">
       <img v-if="news.image.thumbnail" :src="news.image.thumbnail" alt="Article Thumbnail" class="img-fluid new-container__img">

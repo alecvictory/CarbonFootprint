@@ -137,7 +137,6 @@ export default {
 }
 .btn-grad-cancel:hover {
   background-position: right center;
-  /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }

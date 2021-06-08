@@ -28,8 +28,6 @@ import { computed, reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import Notification from '../utils/Notification'
 import { AppState } from '../AppState'
-// import { profilesService } from '../services/ProfilesService'
-// import { apiService } from '../services/ApiService'
 
 export default {
   name: 'Profile',
